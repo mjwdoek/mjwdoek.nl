@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Privacybeleid — Aan'm de Podcast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;700&family=Caveat:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0D0A;
+    --bg-deep: #0E120D;
+    --card: #141A12;
+    --raised: #1C241A;
+    --lime: #C5D24A;
+    --green: #1F5130;
+    --gold: #E3A92E;
+    --text-strong: #FBF6E9;
+    --text-body: #F3E9D0;
+    --text-dim: #9AA293;
+    --border: #283223;
+    --font-display: 'Anton', sans-serif;
+    --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-script: 'Caveat', cursive;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 0 80px;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-family: var(--font-script);
+    font-size: 26px;
+    color: var(--lime);
+    margin-top: 6px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    margin-top: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(22px, 5vw, 30px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+    margin: 44px 0 16px;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-strong);
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  a {
+    color: var(--lime);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(197, 210, 74, 0.35);
+  }
+  a:hover { border-bottom-color: var(--lime); }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  strong { color: var(--text-strong); font-weight: 700; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+
+  .card h2:first-child, .card h3:first-child { margin-top: 0; }
+
+  .lead {
+    font-size: 17px;
+    color: var(--text-body);
+  }
+
+  .contact-mail {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--lime);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    padding-top: 24px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--lime);
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin: 2px 4px 2px 0;
+  }
+
+  /* Taal & terug-navigatie */
+  .topbar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 22px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .backlink {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    border-bottom: none;
+  }
+  .backlink:hover { color: var(--lime); }
+  .langbar {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .langbar button {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    background: transparent;
+    border: 0;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .langbar button[aria-pressed="true"] {
+    color: var(--bg);
+    background: var(--lime);
+  }
+  [data-lang] { display: none; }
+  html[lang="nl"] [data-lang="nl"],
+  html[lang="en"] [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="backlink" href="/aanm-de-podcast/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+  <div class="langbar" role="group" aria-label="Taal / Language">
+    <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">Aan'm de Podcast</div>
+    <h1><span data-lang="nl">Privacybeleid</span><span data-lang="en">Privacy Policy</span></h1>
+    <div class="subtitle">de App</div>
+    <div class="meta"><span data-lang="nl">Laatst bijgewerkt: 19 juli 2026</span><span data-lang="en">Last updated: 19 July 2026</span></div>
+  </header>
+
+  <!-- ================= NL ================= -->
+  <div data-lang="nl">
+  <p class="lead">
+    Dit privacybeleid legt uit welke persoonsgegevens de <strong>Aan'm de Podcast</strong>-app
+    verzamelt, waarom we die gebruiken, en welke rechten je hebt. We gaan zorgvuldig met je
+    gegevens om en verzamelen alleen wat nodig is om de app te laten werken.
+  </p>
+
+  <div class="card">
+    <h3>Wie is verantwoordelijk?</h3>
+    <p>
+      De app en de podcast worden beheerd door de makers van Aan'm de Podcast. Voor vragen over dit
+      privacybeleid of je gegevens kun je contact opnemen via het e-mailadres onderaan deze pagina.
+    </p>
+  </div>
+
+  <h2>Welke gegevens we verzamelen</h2>
+  <p>Afhankelijk van hoe je de app gebruikt, verwerken we de volgende gegevens:</p>
+
+  <h3>Account- en profielgegevens</h3>
+  <ul>
+    <li>Je <strong>e-mailadres</strong> en <strong>naam</strong>, via inloggen met Google, Apple of e-mail + wachtwoord.</li>
+    <li>Je door jou ingevulde <strong>voor- en achternaam</strong> en (optioneel) <strong>telefoonnummer</strong>.</li>
+    <li>De <strong>inlogmethode</strong> (Google, Apple of e-mail). We slaan <strong>geen profielfoto</strong> op — ook niet als je met Google of Apple inlogt.</li>
+  </ul>
+
+  <h3>Inhoud die je zelf instuurt</h3>
+  <ul>
+    <li><strong>Vragen en ideeën</strong> voor de show — ingesproken (audio-opname) of getypt.</li>
+    <li><strong>Forumberichten</strong> en reacties (voor Only Friends).</li>
+    <li><strong>Voorspellingen</strong> van wedstrijduitslagen en <strong>gaststemmen/-suggesties</strong>.</li>
+    <li><strong>Likes</strong> op afleveringen en nummers.</li>
+  </ul>
+
+  <h3>Bestellingen en donaties</h3>
+  <ul>
+    <li>Bij een <strong>bestelling in de shop</strong>: je naam, telefoonnummer en de bestelde artikelen.</li>
+    <li>Bij een <strong>Only Friends-donatie</strong>: je naam en e-mailadres (de betaling zelf verloopt buiten de app, via een betaalverzoek).</li>
+  </ul>
+
+  <h3>Technische gegevens</h3>
+  <ul>
+    <li>Een <strong>meldingen-token</strong> van je toestel, zodat we je push-meldingen kunnen sturen (alleen als je daar toestemming voor geeft).</li>
+  </ul>
+
+  <h2>Waarom we deze gegevens gebruiken</h2>
+  <ul>
+    <li>Om je <strong>account</strong> aan te maken en je aangemeld te houden.</li>
+    <li>Om de <strong>functies van de app</strong> te laten werken (vragen insturen, voorspellen, forum, shop, Only Friends).</li>
+    <li>Om je <strong>bestellingen</strong> af te handelen en contact met je op te nemen.</li>
+    <li>Om je <strong>meldingen</strong> te sturen over nieuwe afleveringen, wedstrijden en de status van je bestelling of aanvraag.</li>
+    <li>Om ingestuurde <strong>vragen</strong> te kunnen gebruiken in de show.</li>
+  </ul>
+
+  <h2>Waar je gegevens worden opgeslagen</h2>
+  <p>
+    De app maakt gebruik van <strong>Google Firebase</strong> (Firebase Authentication, Cloud
+    Firestore, Cloud Storage en Cloud Messaging) voor het inloggen, het opslaan van gegevens en
+    het versturen van meldingen. Google verwerkt deze gegevens als onze verwerker; de opslag en
+    verwerking vinden plaats op de servers van Google.
+  </p>
+  <p>
+    Ingesproken vragen worden als audiobestand opgeslagen. Zie hieronder bij <em>Bewaartermijnen</em>
+    hoe lang we die bewaren.
+  </p>
+
+  <h2>Beveiliging van je gegevens</h2>
+  <p>
+    Je gegevens worden <strong>versleuteld verzonden en opgeslagen</strong>. Alle communicatie tussen
+    de app en Firebase verloopt over een beveiligde verbinding (<strong>TLS/HTTPS</strong>), en Google
+    versleutelt de opgeslagen gegevens standaard op zijn servers. Wachtwoorden bewaart Firebase
+    Authentication versleuteld (als salted hash), nooit als leesbare tekst. Daarnaast bepalen
+    toegangsregels wie welke gegevens mag inzien — doorgaans alleen jijzelf en de beheerder.
+  </p>
+
+  <h2>Externe diensten en links</h2>
+  <p>
+    De app toont afleveringen en de hitlijst vanuit <strong>Spotify</strong>. Wanneer je een
+    aflevering in de app afspeelt, wordt de audio gestreamd vanaf de <strong>hostingdienst van de
+    podcast</strong> (Spotify for Podcasters / Anchor en hun CDN); daarbij wordt geen persoonlijke
+    informatie van jou meegestuurd. Voor nummers uit de hitlijst en als terugval voor afleveringen
+    open je Spotify — daarop is het privacybeleid van Spotify van toepassing. De app bevat ook links
+    naar externe websites (zoals sponsoren, de clubsite en socials); voor die sites gelden hun eigen
+    privacyverklaringen.
+  </p>
+
+  <h2>Bewaartermijnen</h2>
+  <ul>
+    <li>Je <strong>account- en profielgegevens</strong> bewaren we zolang je een account hebt. Verwijder je je account, dan worden deze gegevens verwijderd.</li>
+    <li><strong>Ingesproken vragen</strong> worden automatisch van de server verwijderd <strong>vier weken nadat de podcastmakers de opname hebben gedownload</strong> voor gebruik in de show. Nog niet gedownloade opnames blijven bewaard tot ze behandeld zijn.</li>
+    <li>Overige gegevens (bestellingen, forumberichten, voorspellingen) bewaren we zolang dat nodig is voor het doel waarvoor ze zijn ingestuurd.</li>
+  </ul>
+
+  <h2>Delen met derden</h2>
+  <p>
+    We verkopen je gegevens niet en delen ze niet met derden voor commerciële doeleinden. Gegevens
+    worden alleen verwerkt door onze technische dienstverlener (Google Firebase) voor zover nodig
+    om de app te laten werken, of wanneer we daartoe wettelijk verplicht zijn.
+  </p>
+
+  <h2>Je rechten</h2>
+  <p>Je hebt op grond van de privacywetgeving (AVG) onder meer het recht om:</p>
+  <ul>
+    <li>je gegevens <strong>in te zien</strong>;</li>
+    <li>je gegevens te laten <strong>corrigeren</strong> (deels kan dat zelf via <em>Meer &gt; Profiel</em> in de app);</li>
+    <li>je account en gegevens te laten <strong>verwijderen</strong>;</li>
+    <li>bezwaar te maken tegen de verwerking van je gegevens.</li>
+  </ul>
+  <p>
+    Wil je hier gebruik van maken? Neem dan contact met ons op via het e-mailadres onderaan deze
+    pagina. Je kunt push-meldingen op elk moment uitzetten in de app of in de instellingen van je
+    telefoon.
+  </p>
+
+  <h2>Beveiliging</h2>
+  <p>
+    We nemen passende maatregelen om je gegevens te beschermen. Toegang tot gegevens is afgeschermd
+    en alleen beschikbaar voor beheerders van de podcast voor zover dat nodig is om de app te
+    beheren (bijvoorbeeld het afhandelen van bestellingen of het beoordelen van ingestuurde vragen).
+  </p>
+
+  <h2>Kinderen</h2>
+  <p>
+    De app is niet specifiek gericht op kinderen. Ben je jonger dan 16 jaar, gebruik de app dan
+    alleen met toestemming van een ouder of verzorger.
+  </p>
+
+  <h2>Wijzigingen</h2>
+  <p>
+    We kunnen dit privacybeleid van tijd tot tijd aanpassen. De meest recente versie staat altijd op
+    deze pagina, met bovenaan de datum van de laatste wijziging.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Vragen over dit privacybeleid of over je gegevens?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div data-lang="en">
+  <p class="lead">
+    This privacy policy explains which personal data the <strong>Aan'm de Podcast</strong> app
+    collects, why we use it, and which rights you have. We handle your data carefully and only
+    collect what is needed to make the app work.
+  </p>
+
+  <div class="card">
+    <h3>Who is responsible?</h3>
+    <p>
+      The app and the podcast are managed by the makers of Aan'm de Podcast. For questions about this
+      privacy policy or your data, you can contact us via the e-mail address at the bottom of this page.
+    </p>
+  </div>
+
+  <h2>What data we collect</h2>
+  <p>Depending on how you use the app, we process the following data:</p>
+
+  <h3>Account and profile data</h3>
+  <ul>
+    <li>Your <strong>e-mail address</strong> and <strong>name</strong>, via sign-in with Google, Apple or e-mail + password.</li>
+    <li>The <strong>first and last name</strong> you enter and (optionally) your <strong>phone number</strong>.</li>
+    <li>The <strong>sign-in method</strong> (Google, Apple or e-mail). We do <strong>not</strong> store a <strong>profile picture</strong> — not even when you sign in with Google or Apple.</li>
+  </ul>
+
+  <h3>Content you submit yourself</h3>
+  <ul>
+    <li><strong>Questions and ideas</strong> for the show — recorded (audio) or typed.</li>
+    <li><strong>Forum posts</strong> and replies (for Only Friends).</li>
+    <li><strong>Predictions</strong> of match results and <strong>guest votes/suggestions</strong>.</li>
+    <li><strong>Likes</strong> on episodes and tracks.</li>
+  </ul>
+
+  <h3>Orders and donations</h3>
+  <ul>
+    <li>For a <strong>shop order</strong>: your name, phone number and the items ordered.</li>
+    <li>For an <strong>Only Friends donation</strong>: your name and e-mail address (the payment itself takes place outside the app, via a payment request).</li>
+  </ul>
+
+  <h3>Technical data</h3>
+  <ul>
+    <li>A <strong>notification token</strong> from your device, so we can send you push notifications (only if you grant permission).</li>
+  </ul>
+
+  <h2>Why we use this data</h2>
+  <ul>
+    <li>To create your <strong>account</strong> and keep you signed in.</li>
+    <li>To make the <strong>features of the app</strong> work (submitting questions, predictions, forum, shop, Only Friends).</li>
+    <li>To handle your <strong>orders</strong> and get in touch with you.</li>
+    <li>To send you <strong>notifications</strong> about new episodes, matches and the status of your order or request.</li>
+    <li>To be able to use submitted <strong>questions</strong> in the show.</li>
+  </ul>
+
+  <h2>Where your data is stored</h2>
+  <p>
+    The app uses <strong>Google Firebase</strong> (Firebase Authentication, Cloud Firestore, Cloud
+    Storage and Cloud Messaging) for signing in, storing data and sending notifications. Google
+    processes this data as our processor; storage and processing take place on Google's servers.
+  </p>
+  <p>
+    Recorded questions are stored as an audio file. See <em>Retention periods</em> below for how long
+    we keep them.
+  </p>
+
+  <h2>Security of your data</h2>
+  <p>
+    Your data is <strong>transmitted and stored encrypted</strong>. All communication between the app
+    and Firebase runs over a secure connection (<strong>TLS/HTTPS</strong>), and Google encrypts the
+    stored data by default on its servers. Firebase Authentication stores passwords encrypted (as a
+    salted hash), never as readable text. In addition, access rules determine who may view which data
+    — usually only you and the administrator.
+  </p>
+
+  <h2>External services and links</h2>
+  <p>
+    The app shows episodes and the chart from <strong>Spotify</strong>. When you play an episode in the
+    app, the audio is streamed from the <strong>podcast's hosting service</strong> (Spotify for
+    Podcasters / Anchor and their CDN); no personal information about you is sent along with it. For
+    tracks from the chart and as a fallback for episodes you open Spotify — Spotify's privacy policy
+    applies there. The app also contains links to external websites (such as sponsors, the club site
+    and socials); those sites have their own privacy statements.
+  </p>
+
+  <h2>Retention periods</h2>
+  <ul>
+    <li>We keep your <strong>account and profile data</strong> for as long as you have an account. If you delete your account, this data is deleted.</li>
+    <li><strong>Recorded questions</strong> are automatically deleted from the server <strong>four weeks after the podcast makers have downloaded the recording</strong> for use in the show. Recordings not yet downloaded are kept until they are handled.</li>
+    <li>Other data (orders, forum posts, predictions) is kept for as long as needed for the purpose for which it was submitted.</li>
+  </ul>
+
+  <h2>Sharing with third parties</h2>
+  <p>
+    We do not sell your data and do not share it with third parties for commercial purposes. Data is
+    only processed by our technical service provider (Google Firebase) as far as needed to run the
+    app, or when we are legally required to do so.
+  </p>
+
+  <h2>Your rights</h2>
+  <p>Under privacy law (GDPR) you have, among others, the right to:</p>
+  <ul>
+    <li><strong>access</strong> your data;</li>
+    <li>have your data <strong>corrected</strong> (you can partly do this yourself via <em>More &gt; Profile</em> in the app);</li>
+    <li>have your account and data <strong>deleted</strong>;</li>
+    <li>object to the processing of your data.</li>
+  </ul>
+  <p>
+    Want to exercise these rights? Contact us via the e-mail address at the bottom of this page. You
+    can turn off push notifications at any time in the app or in your phone's settings.
+  </p>
+
+  <h2>Security</h2>
+  <p>
+    We take appropriate measures to protect your data. Access to data is restricted and only available
+    to podcast administrators as far as needed to manage the app (for example, handling orders or
+    reviewing submitted questions).
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    The app is not specifically aimed at children. If you are under 16, only use the app with the
+    permission of a parent or guardian.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update this privacy policy from time to time. The most recent version is always on this
+    page, with the date of the last change at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Questions about this privacy policy or about your data?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <footer>
+    <span data-lang="nl">Aan'm de Podcast — Privacybeleid · Deze pagina hoort bij de Aan'm de Podcast-app in de App Store en Google Play.</span>
+    <span data-lang="en">Aan'm de Podcast — Privacy Policy · This page belongs to the Aan'm de Podcast app in the App Store and Google Play.</span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'md-lang';
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    function apply(lang) {
+      if (lang !== 'en') lang = 'nl';
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = 'nl';
+    try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+    apply(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
+</body>
+</html>

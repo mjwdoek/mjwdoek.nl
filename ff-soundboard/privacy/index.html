@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacybeleid – FF Soundboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161820;
+      --border: #2a2d3a;
+      --accent: #f0a500;
+      --accent-dim: rgba(240,165,0,0.12);
+      --text: #e8e9ef;
+      --muted: #8b8fa8;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      padding: 0 1rem;
+    }
+
+    .topbar {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.4rem 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .backlink {
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .backlink:hover { color: var(--accent); }
+    .langbar {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .langbar button {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      background: transparent;
+      border: 0;
+      padding: 0.35rem 0.9rem;
+      cursor: pointer;
+    }
+    .langbar button[aria-pressed="true"] {
+      color: #1a1205;
+      background: var(--accent);
+    }
+    [data-lang] { display: none; }
+    html[lang="nl"] [data-lang="nl"],
+    html[lang="en"] [data-lang="en"] { display: revert; }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid rgba(240,165,0,0.3);
+      padding: 0.3rem 0.8rem;
+      border-radius: 99px;
+      margin-bottom: 1.2rem;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 0 5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem 2rem;
+      position: relative;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--accent);
+      border-radius: var(--radius) 0 0 var(--radius);
+      opacity: 0.6;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0.9rem;
+    }
+
+    p { margin-bottom: 0.8rem; font-size: 0.95rem; color: #c8cad8; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0.8rem;
+    }
+    ul li {
+      font-size: 0.95rem;
+      color: #c8cad8;
+      padding: 0.25rem 0 0.25rem 1.3rem;
+      position: relative;
+    }
+    ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .highlight {
+      background: var(--accent-dim);
+      border: 1px solid rgba(240,165,0,0.25);
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      font-size: 0.9rem;
+      color: #d4a84b;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="backlink" href="/ff-soundboard/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+  <div class="langbar" role="group" aria-label="Taal / Language">
+    <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+
+<header>
+  <div class="badge"><span data-lang="nl">Privacybeleid</span><span data-lang="en">Privacy Policy</span></div>
+  <h1>FF Soundboard<br>FunFair Soundboard</h1>
+  <p class="meta">
+    <span data-lang="nl">Ingangsdatum: 15 maart 2025 &nbsp;·&nbsp; Laatste update: 15 maart 2026</span>
+    <span data-lang="en">Effective date: 15 March 2025 &nbsp;·&nbsp; Last update: 15 March 2026</span>
+  </p>
+</header>
+
+<!-- ================= NL ================= -->
+<main data-lang="nl">
+
+  <section>
+    <h2>1. Introductie</h2>
+    <p>
+      Welkom bij <strong>FF Soundboard (FunFair Soundboard)</strong> ("de App"). Deze privacyverklaring legt uit hoe wij omgaan met informatie wanneer u onze App gebruikt. Wij hechten grote waarde aan uw privacy en zijn transparant over de manier waarop de App functioneert.
+    </p>
+    <p>
+      Door gebruik te maken van de App gaat u akkoord met de voorwaarden in dit privacybeleid.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Gegevens die wij verzamelen</h2>
+    <p>
+      <strong>Wij verzamelen zelf geen persoonlijke gegevens.</strong> De App vraagt geen naam, e-mailadres, locatie, of andere persoonsgegevens op.
+    </p>
+    <div class="highlight">
+      ✓ Geen registratie vereist &nbsp;·&nbsp; ✓ Geen account aanmaken &nbsp;·&nbsp; ✓ Geen opslag van gebruikersdata door ons
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Advertenties via Google AdMob</h2>
+    <p>
+      De App maakt gebruik van <strong>Google AdMob</strong>, een advertentiedienst van Google LLC, voor het weergeven van advertenties. AdMob kan automatisch bepaalde technische gegevens verzamelen om relevante advertenties te tonen, waaronder:
+    </p>
+    <ul>
+      <li>Apparaatidentificatoren (zoals advertentie-ID)</li>
+      <li>IP-adres</li>
+      <li>Informatie over het apparaat en besturingssysteem</li>
+      <li>Interactiegegevens met advertenties</li>
+    </ul>
+    <p>
+      Deze gegevens worden verwerkt door Google LLC op basis van hun eigen privacybeleid. U kunt het privacybeleid van Google raadplegen via:
+      <br><a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+    <p>
+      U kunt gepersonaliseerde advertenties uitschakelen via de advertentie-instellingen van uw Android-apparaat: <em>Instellingen → Google → Advertenties</em>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Grondslag voor verwerking (AVG / GDPR)</h2>
+    <p>
+      Wij zijn gevestigd in de Europese Unie en houden ons aan de Algemene Verordening Gegevensbescherming (AVG). De advertentieverwerking door Google AdMob vindt plaats op basis van:
+    </p>
+    <ul>
+      <li>Uw toestemming, indien u gepersonaliseerde advertenties toestaat</li>
+      <li>Gerechtvaardigd belang, voor niet-gepersonaliseerde advertenties</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Gegevens van derden</h2>
+    <p>
+      De App bevat uitsluitend de volgende externe dienst:
+    </p>
+    <ul>
+      <li><strong>Google AdMob</strong> – voor advertentieweergave (Google LLC, VS)</li>
+    </ul>
+    <p>
+      Wij hebben geen controle over de gegevensverwerkingspraktijken van Google AdMob en verwijzen u voor meer informatie naar hun eigen privacybeleid.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Uw rechten</h2>
+    <p>Als inwoner van de EU heeft u de volgende rechten met betrekking tot uw persoonsgegevens:</p>
+    <ul>
+      <li>Recht op inzage in uw gegevens</li>
+      <li>Recht op correctie van onjuiste gegevens</li>
+      <li>Recht op verwijdering ("recht op vergetelheid")</li>
+      <li>Recht om bezwaar te maken tegen verwerking</li>
+      <li>Recht op beperking van verwerking</li>
+    </ul>
+    <p>
+      Voor vragen of verzoeken kunt u contact opnemen via het e-mailadres onderaan dit document.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Beveiliging</h2>
+    <p>
+      Omdat wij zelf geen persoonlijke gegevens opslaan, bestaat er geen risico op datalekken aan onze zijde. Wij raden u wel aan uw Android-apparaat up-to-date te houden en voorzichtig te zijn met het verlenen van app-permissies in het algemeen.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Kinderen</h2>
+    <p>
+      De App is niet gericht op kinderen onder de 13 jaar. Wij verzamelen bewust geen gegevens van kinderen. Als u vermoedt dat een kind gegevens heeft verstrekt, neem dan contact met ons op.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Wijzigingen in dit privacybeleid</h2>
+    <p>
+      Wij kunnen dit privacybeleid van tijd tot tijd bijwerken. Wijzigingen worden gepubliceerd op deze pagina met een bijgewerkte ingangsdatum. Wij adviseren u dit beleid periodiek te raadplegen.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Contact</h2>
+    <p>Heeft u vragen over dit privacybeleid? Neem dan contact met ons op:</p>
+    <p>
+      📧 <a href="mailto:mjwdoek@hotmail.com">mjwdoek@hotmail.com</a>
+    </p>
+  </section>
+
+</main>
+
+<!-- ================= EN ================= -->
+<main data-lang="en">
+
+  <section>
+    <h2>1. Introduction</h2>
+    <p>
+      Welcome to <strong>FF Soundboard (FunFair Soundboard)</strong> ("the App"). This privacy statement explains how we handle information when you use our App. We greatly value your privacy and are transparent about how the App works.
+    </p>
+    <p>
+      By using the App you agree to the terms in this privacy policy.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Data we collect</h2>
+    <p>
+      <strong>We do not collect any personal data ourselves.</strong> The App does not ask for your name, e-mail address, location, or other personal data.
+    </p>
+    <div class="highlight">
+      ✓ No registration required &nbsp;·&nbsp; ✓ No account to create &nbsp;·&nbsp; ✓ No storage of user data by us
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Advertising via Google AdMob</h2>
+    <p>
+      The App uses <strong>Google AdMob</strong>, an advertising service by Google LLC, to display advertisements. AdMob may automatically collect certain technical data to show relevant ads, including:
+    </p>
+    <ul>
+      <li>Device identifiers (such as advertising ID)</li>
+      <li>IP address</li>
+      <li>Information about the device and operating system</li>
+      <li>Interaction data with advertisements</li>
+    </ul>
+    <p>
+      This data is processed by Google LLC based on their own privacy policy. You can consult Google's privacy policy at:
+      <br><a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+    </p>
+    <p>
+      You can disable personalised advertising via the ad settings on your Android device: <em>Settings → Google → Ads</em>.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Basis for processing (GDPR)</h2>
+    <p>
+      We are based in the European Union and comply with the General Data Protection Regulation (GDPR). The advertising processing by Google AdMob takes place on the basis of:
+    </p>
+    <ul>
+      <li>Your consent, if you allow personalised advertising</li>
+      <li>Legitimate interest, for non-personalised advertising</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>5. Third-party data</h2>
+    <p>
+      The App contains only the following external service:
+    </p>
+    <ul>
+      <li><strong>Google AdMob</strong> – for displaying advertisements (Google LLC, USA)</li>
+    </ul>
+    <p>
+      We have no control over the data processing practices of Google AdMob and refer you to their own privacy policy for more information.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Your rights</h2>
+    <p>As an EU resident, you have the following rights regarding your personal data:</p>
+    <ul>
+      <li>Right of access to your data</li>
+      <li>Right to correction of incorrect data</li>
+      <li>Right to erasure ("right to be forgotten")</li>
+      <li>Right to object to processing</li>
+      <li>Right to restriction of processing</li>
+    </ul>
+    <p>
+      For questions or requests, you can contact us via the e-mail address at the bottom of this document.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Security</h2>
+    <p>
+      Because we do not store any personal data ourselves, there is no risk of data breaches on our side. We do recommend keeping your Android device up to date and being careful with granting app permissions in general.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Children</h2>
+    <p>
+      The App is not aimed at children under the age of 13. We deliberately do not collect data from children. If you suspect that a child has provided data, please contact us.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Changes to this privacy policy</h2>
+    <p>
+      We may update this privacy policy from time to time. Changes are published on this page with an updated effective date. We advise you to review this policy periodically.
+    </p>
+  </section>
+
+  <section>
+    <h2>10. Contact</h2>
+    <p>Do you have questions about this privacy policy? Please contact us:</p>
+    <p>
+      📧 <a href="mailto:mjwdoek@hotmail.com">mjwdoek@hotmail.com</a>
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <span>© 2026 FF Soundboard – FunFair Soundboard</span>
+  <span data-lang="nl">Alle rechten voorbehouden</span>
+  <span data-lang="en">All rights reserved</span>
+</footer>
+
+<script>
+  (function () {
+    var KEY = 'md-lang';
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    function apply(lang) {
+      if (lang !== 'en') lang = 'nl';
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = 'nl';
+    try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+    apply(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
+
+</body>
+</html>

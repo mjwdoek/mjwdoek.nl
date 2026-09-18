@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Gebruiksvoorwaarden — Aan'm de Podcast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;700&family=Caveat:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0A0D0A;
+    --bg-deep: #0E120D;
+    --card: #141A12;
+    --raised: #1C241A;
+    --lime: #C5D24A;
+    --green: #1F5130;
+    --gold: #E3A92E;
+    --text-strong: #FBF6E9;
+    --text-body: #F3E9D0;
+    --text-dim: #9AA293;
+    --border: #283223;
+    --font-display: 'Anton', sans-serif;
+    --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-script: 'Caveat', cursive;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 0 80px;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-family: var(--font-script);
+    font-size: 26px;
+    color: var(--lime);
+    margin-top: 6px;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    margin-top: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(22px, 5vw, 30px);
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+    margin: 44px 0 16px;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-strong);
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  a {
+    color: var(--lime);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(197, 210, 74, 0.35);
+  }
+  a:hover { border-bottom-color: var(--lime); }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  strong { color: var(--text-strong); font-weight: 700; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin: 22px 0;
+  }
+
+  .card h2:first-child, .card h3:first-child { margin-top: 0; }
+
+  .lead {
+    font-size: 17px;
+    color: var(--text-body);
+  }
+
+  .contact-mail {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--lime);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    padding-top: 24px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--lime);
+    border-radius: 100px;
+    padding: 3px 10px;
+    margin: 2px 4px 2px 0;
+  }
+
+  /* Taal & terug-navigatie */
+  .topbar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 22px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .backlink {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    border-bottom: none;
+  }
+  .backlink:hover { color: var(--lime); }
+  .langbar {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .langbar button {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    background: transparent;
+    border: 0;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .langbar button[aria-pressed="true"] {
+    color: var(--bg);
+    background: var(--lime);
+  }
+  [data-lang] { display: none; }
+  html[lang="nl"] [data-lang="nl"],
+  html[lang="en"] [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="backlink" href="/aanm-de-podcast/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+  <div class="langbar" role="group" aria-label="Taal / Language">
+    <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">Aan'm de Podcast</div>
+    <h1><span data-lang="nl">Gebruiksvoorwaarden</span><span data-lang="en">Terms of Use</span></h1>
+    <div class="subtitle">de App</div>
+    <div class="meta"><span data-lang="nl">Laatst bijgewerkt: 31 juli 2026</span><span data-lang="en">Last updated: 31 July 2026</span></div>
+  </header>
+
+  <!-- ================= NL ================= -->
+  <div data-lang="nl">
+  <p class="lead">
+    Welkom bij de <strong>Aan'm de Podcast</strong>-app. Door de app te gebruiken ga je akkoord met
+    deze gebruiksvoorwaarden. Lees ze even door — ze houden de app leuk en veilig voor iedereen in
+    de geel-groene familie.
+  </p>
+
+  <div class="card">
+    <h3>Wie zijn wij?</h3>
+    <p>
+      De app en de podcast worden beheerd door de makers van Aan'm de Podcast ("wij"). Voor vragen
+      over deze voorwaarden kun je contact opnemen via het e-mailadres onderaan deze pagina.
+    </p>
+  </div>
+
+  <h2>Je account</h2>
+  <ul>
+    <li>Je logt in met Google, Apple of e-mail + wachtwoord. Je bent zelf verantwoordelijk voor je inloggegevens.</li>
+    <li>Je geeft correcte gegevens op en gebruikt de app niet namens iemand anders zonder toestemming.</li>
+    <li>Je kunt je account op elk moment zelf verwijderen via <strong>Meer &rsaquo; Profiel &rsaquo; Account verwijderen</strong>.</li>
+  </ul>
+
+  <h2>Gedragsregels &amp; door gebruikers gemaakte inhoud</h2>
+  <p>
+    In de app kun je zelf inhoud plaatsen, zoals <strong>forumberichten en reacties</strong>, vragen
+    of ideeën voor de show, en GIF's. Voor deze inhoud gelden duidelijke regels.
+  </p>
+
+  <div class="card">
+    <p><strong>Er geldt geen enkele tolerantie voor ongepaste inhoud of misbruikend gedrag.</strong></p>
+    <p>Bij het plaatsen van inhoud ga je ermee akkoord dat je géén inhoud plaatst die:</p>
+    <ul>
+      <li>beledigend, haatdragend, discriminerend, bedreigend of intimiderend is;</li>
+      <li>pornografisch, gewelddadig of anderszins aanstootgevend is;</li>
+      <li>spam, oplichting of misleidende informatie bevat;</li>
+      <li>inbreuk maakt op rechten van anderen (waaronder auteursrecht en privacy);</li>
+      <li>onwettig is of aanzet tot onwettig gedrag.</li>
+    </ul>
+  </div>
+
+  <h3>Moderatie, melden en blokkeren</h3>
+  <ul>
+    <li>Forumberichten worden <strong>vooraf door een beheerder beoordeeld</strong> en zijn pas zichtbaar na goedkeuring.</li>
+    <li>Je kunt ongepaste inhoud <strong>melden</strong> via de "Melden"-optie bij een bericht.</li>
+    <li>Je kunt een gebruiker <strong>blokkeren</strong>, zodat je diens inhoud niet meer ziet.</li>
+    <li>Wij verwijderen gemelde, ongepaste inhoud en kunnen misbruikende gebruikers de toegang ontzeggen — normaal gesproken <strong>binnen 24 uur</strong> na een melding.</li>
+  </ul>
+
+  <h2>Only Friends, bestellingen en donaties</h2>
+  <ul>
+    <li>Donaties aan de podcast zijn vrijwillig en verlopen <strong>buiten de app</strong>, via een extern betaalverzoek. Als "Only Friend" krijg je toegang tot enkele extra's in de app.</li>
+    <li>Bestellingen in de shop betreffen <strong>fysieke artikelen</strong>; de afhandeling en betaling regelen we buiten de app met je.</li>
+  </ul>
+
+  <h2>Intellectueel eigendom</h2>
+  <p>
+    De naam, het logo, de vormgeving en de inhoud van de podcast en de app zijn van Aan'm de Podcast.
+    Inhoud die jij plaatst blijft van jou, maar je geeft ons toestemming die binnen de app te tonen.
+  </p>
+
+  <h2>Aansprakelijkheid</h2>
+  <p>
+    We doen ons best om de app goed te laten werken, maar bieden 'm aan "zoals hij is". We zijn niet
+    aansprakelijk voor schade door het gebruik van de app of door inhoud die door gebruikers is geplaatst.
+  </p>
+
+  <h2>Beëindiging</h2>
+  <p>
+    Je mag je account op elk moment verwijderen. Wij mogen toegang tot (delen van) de app beperken of
+    beëindigen als je deze voorwaarden overtreedt.
+  </p>
+
+  <h2>Wijzigingen</h2>
+  <p>
+    We kunnen deze voorwaarden van tijd tot tijd aanpassen. De meest recente versie staat altijd op
+    deze pagina, met bovenaan de datum van de laatste wijziging.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Vragen over deze gebruiksvoorwaarden of wil je iets melden?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div data-lang="en">
+  <p class="lead">
+    Welcome to the <strong>Aan'm de Podcast</strong> app. By using the app you agree to these terms of
+    use. Please read them — they keep the app fun and safe for everyone in the yellow-green family.
+  </p>
+
+  <div class="card">
+    <h3>Who are we?</h3>
+    <p>
+      The app and the podcast are managed by the makers of Aan'm de Podcast ("we"). For questions about
+      these terms, you can contact us via the e-mail address at the bottom of this page.
+    </p>
+  </div>
+
+  <h2>Your account</h2>
+  <ul>
+    <li>You sign in with Google, Apple or e-mail + password. You are responsible for your own login details.</li>
+    <li>You provide correct details and do not use the app on someone else's behalf without permission.</li>
+    <li>You can delete your account at any time via <strong>More &rsaquo; Profile &rsaquo; Delete account</strong>.</li>
+  </ul>
+
+  <h2>Conduct &amp; user-generated content</h2>
+  <p>
+    In the app you can post content yourself, such as <strong>forum posts and replies</strong>, questions
+    or ideas for the show, and GIFs. Clear rules apply to this content.
+  </p>
+
+  <div class="card">
+    <p><strong>There is zero tolerance for inappropriate content or abusive behaviour.</strong></p>
+    <p>By posting content, you agree not to post content that:</p>
+    <ul>
+      <li>is offensive, hateful, discriminatory, threatening or intimidating;</li>
+      <li>is pornographic, violent or otherwise objectionable;</li>
+      <li>contains spam, fraud or misleading information;</li>
+      <li>infringes the rights of others (including copyright and privacy);</li>
+      <li>is unlawful or incites unlawful behaviour.</li>
+    </ul>
+  </div>
+
+  <h3>Moderation, reporting and blocking</h3>
+  <ul>
+    <li>Forum posts are <strong>reviewed in advance by an administrator</strong> and only become visible after approval.</li>
+    <li>You can <strong>report</strong> inappropriate content via the "Report" option on a post.</li>
+    <li>You can <strong>block</strong> a user, so you no longer see their content.</li>
+    <li>We remove reported, inappropriate content and may deny abusive users access — normally <strong>within 24 hours</strong> of a report.</li>
+  </ul>
+
+  <h2>Only Friends, orders and donations</h2>
+  <ul>
+    <li>Donations to the podcast are voluntary and take place <strong>outside the app</strong>, via an external payment request. As an "Only Friend" you get access to some extras in the app.</li>
+    <li>Shop orders concern <strong>physical items</strong>; we arrange the handling and payment with you outside the app.</li>
+  </ul>
+
+  <h2>Intellectual property</h2>
+  <p>
+    The name, logo, design and content of the podcast and the app belong to Aan'm de Podcast. Content
+    you post remains yours, but you give us permission to display it within the app.
+  </p>
+
+  <h2>Liability</h2>
+  <p>
+    We do our best to keep the app working well, but we offer it "as is". We are not liable for damage
+    caused by using the app or by content posted by users.
+  </p>
+
+  <h2>Termination</h2>
+  <p>
+    You may delete your account at any time. We may limit or end access to (parts of) the app if you
+    breach these terms.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update these terms from time to time. The most recent version is always on this page, with
+    the date of the last change at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Questions about these terms of use, or want to report something?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <footer>
+    <span data-lang="nl">Aan'm de Podcast — Gebruiksvoorwaarden · Deze pagina hoort bij de Aan'm de Podcast-app in de App Store en Google Play.</span>
+    <span data-lang="en">Aan'm de Podcast — Terms of Use · This page belongs to the Aan'm de Podcast app in the App Store and Google Play.</span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'md-lang';
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    function apply(lang) {
+      if (lang !== 'en') lang = 'nl';
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = 'nl';
+    try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+    apply(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
+</body>
+</html>
