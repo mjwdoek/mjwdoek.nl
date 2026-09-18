@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GardenAlerts — Privacybeleid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.7;
+      color: #212121;
+      background: #ffffff;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #ffffff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    header p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 24px 48px;
+    }
+
+    .intro {
+      margin-bottom: 32px;
+      color: #444;
+      font-size: 14px;
+    }
+
+    section {
+      margin-bottom: 8px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    section:nth-child(odd) {
+      background-color: #F9F9F9;
+    }
+
+    section:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    .section-inner {
+      padding: 24px 28px;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #2E7D32;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #C8E6C9;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      font-weight: 600;
+      color: #333;
+    }
+
+    a {
+      color: #388E3C;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #F4F4F4;
+      color: #757575;
+      text-align: center;
+      padding: 20px 24px;
+      font-size: 12px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    /* Taal & terug-navigatie */
+    .topbar {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 16px 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .backlink {
+      font-size: 12px;
+      color: #757575;
+    }
+    .backlink:hover { color: #2E7D32; text-decoration: none; }
+    .langbar {
+      display: inline-flex;
+      border: 1px solid #C8E6C9;
+      border-radius: 99px;
+      overflow: hidden;
+      background: #F1F8E9;
+    }
+    .langbar button {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: #558B2F;
+      background: transparent;
+      border: 0;
+      padding: 5px 13px;
+      cursor: pointer;
+    }
+    .langbar button[aria-pressed="true"] {
+      color: #ffffff;
+      background: #4CAF50;
+    }
+    [data-lang] { display: none; }
+    html[lang="nl"] [data-lang="nl"],
+    html[lang="en"] [data-lang="en"] { display: revert; }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 22px;
+      }
+
+      main {
+        padding: 24px 16px 40px;
+      }
+
+      .section-inner {
+        padding: 20px 16px;
+      }
+      .topbar { padding: 14px 16px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="backlink" href="/gardenalerts/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+    <div class="langbar" role="group" aria-label="Taal / Language">
+      <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <header>
+    <h1>GardenAlerts</h1>
+    <p><span data-lang="nl">Privacybeleid</span><span data-lang="en">Privacy Policy</span></p>
+  </header>
+
+  <!-- ================= NL ================= -->
+  <main data-lang="nl">
+
+    <p class="intro">
+      GardenAlerts is een iOS-app voor het bijhouden van tuinplanten binnen het gezin. Om de app goed te laten werken
+      worden een aantal gegevens opgeslagen. In dit beleid leggen wij uit welke gegevens dat zijn, hoe wij ze gebruiken
+      en hoe wij ze beveiligen.
+    </p>
+
+    <section>
+      <div class="section-inner">
+        <h2>Welke gegevens verzamelen wij?</h2>
+        <ul>
+          <li>
+            <span class="label">E-mailadres</span> — gebruikt voor het aanmaken van een account en inloggen via
+            Firebase Authentication.
+          </li>
+          <li>
+            <span class="label">Foto's van planten en tuinen</span> — foto's die u maakt met de camera of kiest uit
+            uw fotobibliotheek worden opgeslagen in Firebase Storage en gekoppeld aan uw tuin of plant.
+          </li>
+          <li>
+            <span class="label">GPS-locatie</span> — eenmalig opgevraagd bij het instellen van een tuinlocatie. De
+            locatie wordt omgezet naar een plaatsnaam via reverse geocoding; de coördinaten worden opgeslagen in
+            Firestore voor toekomstig gebruik (bijv. weersadviezen). De app vraagt locatietoegang alleen wanneer u
+            actief op de locatieknop drukt.
+          </li>
+          <li>
+            <span class="label">Agendatoegang</span> — wanneer u zorgtaken exporteert naar Apple Kalender, maakt de
+            app een aparte agenda aan met de naam "GardenAlerts". Hiervoor wordt eenmalig toestemming gevraagd.
+          </li>
+          <li>
+            <span class="label">Push-notificatietoken (FCM)</span> — een apparaattoken dat door Firebase Cloud
+            Messaging wordt gegenereerd en in Firestore wordt opgeslagen. Dit token wordt gebruikt om
+            zorgtaakherinneringen te sturen. U kunt notificaties op elk moment uitschakelen in de app-instellingen.
+          </li>
+          <li>
+            <span class="label">App-gegevens</span> — tuinen (naam, locatie, foto), planten (naam, soort, zorginfo,
+            foto's) en zorgtaken (datum, type, status) worden opgeslagen in Cloud Firestore.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Hoe gebruiken wij uw gegevens?</h2>
+        <ul>
+          <li>Authenticatie en accountbeheer</li>
+          <li>Weergeven en beheren van uw tuinen en planten</li>
+          <li>Plannen en versturen van zorgtaakherinneringen via push-notificaties</li>
+          <li>Exporteren van zorgtaken naar uw apparaatkalender of als iCal-bestand</li>
+        </ul>
+        <p style="margin-top: 12px;">
+          Uw gegevens worden uitsluitend gebruikt voor de werking van de app. Er vindt geen profilering,
+          advertentietargeting of geautomatiseerde besluitvorming plaats.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Gegevensopslag en beveiliging</h2>
+        <ul>
+          <li>
+            Alle gegevens worden opgeslagen in <span class="label">Firebase</span> (Google Cloud Platform), beveiligd
+            via Firebase Security Rules. Alleen ingelogde gebruikers met de juiste rechten kunnen data lezen of
+            schrijven.
+          </li>
+          <li>
+            Foto's worden opgeslagen in <span class="label">Firebase Storage</span> en zijn alleen toegankelijk
+            binnen de geauthenticeerde app.
+          </li>
+          <li>
+            Gegevens worden <span class="label">niet verkocht, verhuurd of gedeeld</span> met derden, met uitzondering
+            van Google Firebase als verwerker (zie
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>).
+          </li>
+          <li>
+            De app maakt gebruik van versleutelde verbindingen (HTTPS) voor alle communicatie met de backend.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Rechten van gebruikers</h2>
+        <ul>
+          <li>
+            <span class="label">Inzage en verwijdering</span> — u kunt via de app uw tuinen, planten en zorgtaken
+            verwijderen. Voor volledige verwijdering van uw account en bijbehorende gegevens kunt u contact opnemen
+            via het onderstaande e-mailadres.
+          </li>
+          <li>
+            <span class="label">Notificaties</span> — push-notificaties kunnen per type (bewateren, bemesten,
+            snoeien, seizoenstaken) worden aan- of uitgezet in de app-instellingen.
+          </li>
+          <li>
+            <span class="label">Locatietoegang</span> — locatietoestemming kan worden ingetrokken via de
+            iOS-instellingen onder Privacy &amp; Beveiliging → Locatievoorzieningen.
+          </li>
+          <li>
+            <span class="label">Agendatoegang</span> — toegang tot de agenda kan worden ingetrokken via de
+            iOS-instellingen onder Privacy &amp; Beveiliging → Agenda.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Contact</h2>
+        <p>Vragen over dit privacybeleid of over je gegevens?</p>
+        <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= EN ================= -->
+  <main data-lang="en">
+
+    <p class="intro">
+      GardenAlerts is an iOS app for keeping track of garden plants within the family. To make the app work properly,
+      some data is stored. In this policy we explain which data that is, how we use it and how we secure it.
+    </p>
+
+    <section>
+      <div class="section-inner">
+        <h2>What data do we collect?</h2>
+        <ul>
+          <li>
+            <span class="label">E-mail address</span> — used to create an account and sign in via
+            Firebase Authentication.
+          </li>
+          <li>
+            <span class="label">Photos of plants and gardens</span> — photos you take with the camera or choose from
+            your photo library are stored in Firebase Storage and linked to your garden or plant.
+          </li>
+          <li>
+            <span class="label">GPS location</span> — requested once when setting up a garden location. The location
+            is converted to a place name via reverse geocoding; the coordinates are stored in Firestore for future use
+            (e.g. weather advice). The app only requests location access when you actively press the location button.
+          </li>
+          <li>
+            <span class="label">Calendar access</span> — when you export care tasks to Apple Calendar, the app creates
+            a separate calendar named "GardenAlerts". Permission is requested once for this.
+          </li>
+          <li>
+            <span class="label">Push notification token (FCM)</span> — a device token generated by Firebase Cloud
+            Messaging and stored in Firestore. This token is used to send care-task reminders. You can turn off
+            notifications at any time in the app settings.
+          </li>
+          <li>
+            <span class="label">App data</span> — gardens (name, location, photo), plants (name, type, care info,
+            photos) and care tasks (date, type, status) are stored in Cloud Firestore.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>How do we use your data?</h2>
+        <ul>
+          <li>Authentication and account management</li>
+          <li>Displaying and managing your gardens and plants</li>
+          <li>Scheduling and sending care-task reminders via push notifications</li>
+          <li>Exporting care tasks to your device calendar or as an iCal file</li>
+        </ul>
+        <p style="margin-top: 12px;">
+          Your data is used solely for the operation of the app. No profiling, advertising targeting or automated
+          decision-making takes place.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Data storage and security</h2>
+        <ul>
+          <li>
+            All data is stored in <span class="label">Firebase</span> (Google Cloud Platform), secured via Firebase
+            Security Rules. Only signed-in users with the right permissions can read or write data.
+          </li>
+          <li>
+            Photos are stored in <span class="label">Firebase Storage</span> and are only accessible within the
+            authenticated app.
+          </li>
+          <li>
+            Data is <span class="label">not sold, rented or shared</span> with third parties, with the exception of
+            Google Firebase as processor (see
+            <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy</a>).
+          </li>
+          <li>
+            The app uses encrypted connections (HTTPS) for all communication with the backend.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>User rights</h2>
+        <ul>
+          <li>
+            <span class="label">Access and deletion</span> — you can delete your gardens, plants and care tasks via
+            the app. For full deletion of your account and associated data, please contact us via the e-mail address
+            below.
+          </li>
+          <li>
+            <span class="label">Notifications</span> — push notifications can be turned on or off per type (watering,
+            feeding, pruning, seasonal tasks) in the app settings.
+          </li>
+          <li>
+            <span class="label">Location access</span> — location permission can be revoked via the iOS settings under
+            Privacy &amp; Security → Location Services.
+          </li>
+          <li>
+            <span class="label">Calendar access</span> — access to the calendar can be revoked via the iOS settings
+            under Privacy &amp; Security → Calendars.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <h2>Contact</h2>
+        <p>Questions about this privacy policy or about your data?</p>
+        <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span data-lang="nl">&copy; 2026 Maartendoek &nbsp;·&nbsp; GardenAlerts &nbsp;·&nbsp; Laatst bijgewerkt: april 2025</span><span data-lang="en">&copy; 2026 Maartendoek &nbsp;·&nbsp; GardenAlerts &nbsp;·&nbsp; Last updated: April 2025</span></p>
+  </footer>
+
+  <script>
+    (function () {
+      var KEY = 'md-lang';
+      var buttons = document.querySelectorAll('[data-set-lang]');
+      function apply(lang) {
+        if (lang !== 'en') lang = 'nl';
+        document.documentElement.lang = lang;
+        buttons.forEach(function (b) {
+          b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+        });
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+      }
+      var saved = 'nl';
+      try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+      apply(saved);
+      buttons.forEach(function (b) {
+        b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+      });
+    })();
+  </script>
+
+</body>
+</html>
