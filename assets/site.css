@@ -32,6 +32,7 @@
 .app-podcast      { --accent:#C5D24A; --accent-ink:#0A0D0A; --accent-soft:rgba(197,210,74,.12); --accent-line:rgba(197,210,74,.30); }
 .app-gardenalerts { --accent:#5FBF63; --accent-ink:#06140A; --accent-soft:rgba(95,191,99,.13);  --accent-line:rgba(95,191,99,.32); }
 .app-ffsoundboard { --accent:#F0A500; --accent-ink:#1A1205; --accent-soft:rgba(240,165,0,.13);  --accent-line:rgba(240,165,0,.32); }
+.app-trainingsbuddy { --accent:#F5C842; --accent-ink:#1A1405; --accent-soft:rgba(245,200,66,.13); --accent-line:rgba(245,200,66,.32); }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -154,7 +155,7 @@ html[lang="en"] .hero h1 .script[data-lang="en"] { display: block; }
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 .appcard {
