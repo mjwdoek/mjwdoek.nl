@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Privacybeleid — TrainingsBuddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #0F1A14;
+    --bg-deep: #0B140F;
+    --card: #17251C;
+    --raised: #1F3126;
+    --border: #2C4234;
+    --gold: #F5C842;
+    --green: #2E7D32;
+    --green-light: #388E3C;
+    --text-strong: #FFFFFF;
+    --text-body: #EEF3EC;
+    --text-dim: #9DB3A3;
+    --font-display: 'Barlow Condensed', system-ui, sans-serif;
+    --font-body: 'Barlow', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 0 80px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(42px, 10vw, 76px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    margin-top: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(24px, 5vw, 34px);
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+    margin: 44px 0 14px;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-strong);
+    margin: 22px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(245, 200, 66, 0.35);
+  }
+  a:hover { border-bottom-color: var(--gold); }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  strong { color: var(--text-strong); font-weight: 600; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 22px 0;
+  }
+  .card h2:first-child, .card h3:first-child { margin-top: 0; }
+
+  .lead { font-size: 17px; color: var(--text-body); }
+
+  .contact-mail { font-family: var(--font-mono); font-size: 14px; color: var(--gold); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    padding-top: 24px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .topbar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 22px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .backlink {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    border-bottom: none;
+  }
+  .backlink:hover { color: var(--gold); }
+  .langbar {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .langbar button {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    background: transparent;
+    border: 0;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .langbar button[aria-pressed="true"] { color: #1A1405; background: var(--gold); }
+
+  [data-lang] { display: none; }
+  html[lang="nl"] [data-lang="nl"],
+  html[lang="en"] [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="backlink" href="/trainingsbuddy/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+  <div class="langbar" role="group" aria-label="Taal / Language">
+    <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">TrainingsBuddy</div>
+    <h1><span data-lang="nl">Privacybeleid</span><span data-lang="en">Privacy Policy</span></h1>
+    <div class="subtitle">Training in Beeld</div>
+    <div class="meta"><span data-lang="nl">Laatst bijgewerkt: 13 november 2026</span><span data-lang="en">Last updated: 13 November 2026</span></div>
+  </header>
+
+  <!-- ================= NL ================= -->
+  <div data-lang="nl">
+  <p class="lead">
+    Dit privacybeleid legt uit welke persoonsgegevens de <strong>TrainingsBuddy</strong>-app
+    (&ldquo;Training in Beeld&rdquo;) verwerkt, waarom we die gebruiken, met wie we ze delen en
+    welke rechten je hebt. We verzamelen alleen wat nodig is om de app te laten werken en tonen
+    geen advertenties.
+  </p>
+
+  <div class="card">
+    <h3>Wie is verantwoordelijk?</h3>
+    <p>
+      TrainingsBuddy wordt gemaakt en beheerd door Maarten Doek. Voor vragen over dit privacybeleid
+      of je gegevens kun je contact opnemen via het e-mailadres onderaan deze pagina.
+    </p>
+  </div>
+
+  <h2>Welke gegevens we verwerken</h2>
+
+  <h3>Account- en profielgegevens</h3>
+  <p>Om de app te gebruiken is inloggen verplicht. Afhankelijk van je inlogmethode verwerken we:</p>
+  <ul>
+    <li>Een <strong>account-ID</strong> en de <strong>inlogmethode</strong> (Apple, Google, e-mail of anoniem).</li>
+    <li>Bij inloggen met <strong>e-mail</strong>, <strong>Apple</strong> of <strong>Google</strong>: je <strong>e-mailadres</strong> (bij Apple kun je kiezen voor een verberg-mijn-e-mailadres).</li>
+    <li>Je door jou ingevulde <strong>naam</strong> en (optioneel) <strong>telefoonnummer</strong>, plus je meldingsvoorkeuren.</li>
+  </ul>
+
+  <h3>Club-, team- en lidmaatschapsgegevens</h3>
+  <ul>
+    <li><strong>Clubgegevens</strong>: clubnaam, plaats, clubkleuren en (optioneel) een <strong>clublogo</strong> dat je uit je fotobibliotheek kiest.</li>
+    <li><strong>Teamgegevens</strong>: teamnaam, teamsoort, aantal spelers, trainingsdagen en veldafmetingen.</li>
+    <li>Je <strong>rol</strong> (trainer of clubadmin), je <strong>lidmaatschapsstatus</strong> en bij welk team je hoort.</li>
+  </ul>
+
+  <h3>Trainingen, oefeningen en filmpjes</h3>
+  <ul>
+    <li>De <strong>oefeningen</strong> die je aanmaakt: titel, je ingetypte <strong>beschrijving</strong>, coachpunten, tags en instellingen.</li>
+    <li>De <strong>trainingen</strong> die je samenstelt: datum, thema, notities en de volgorde van oefeningen.</li>
+    <li>De automatisch gegenereerde <strong>filmpjes</strong> en miniaturen, en &ldquo;likes&rdquo; die je op oefeningen geeft.</li>
+  </ul>
+
+  <h3>Uitnodigingen en transfers</h3>
+  <ul>
+    <li><strong>Uitnodigingscodes</strong> om trainers aan een club toe te voegen (14 dagen geldig).</li>
+    <li>Bij een <strong>overstap naar een andere club</strong>: je naam, de betrokken clubs en het gewenste team.</li>
+  </ul>
+
+  <h3>Technische gegevens</h3>
+  <ul>
+    <li>Een <strong>meldingen-token</strong> van je toestel (met platform en app-versie), zodat we je push-meldingen kunnen sturen als je daar toestemming voor geeft.</li>
+    <li>Een eenvoudige <strong>teller</strong> van het aantal gemaakte filmpjes per dag, om een eerlijk gebruik te bewaken.</li>
+  </ul>
+
+  <h2>De AI-stap (Google Gemini)</h2>
+  <p>
+    Om van jouw beschrijving een filmpje te maken, stuurt onze backend de <strong>tekst van je
+    oefening</strong> naar een <strong>Gemini</strong>-taalmodel van Google, via <strong>Google
+    Vertex AI</strong>. Het model maakt daar een script van, waarna de app het filmpje rendert.
+    Google verwerkt deze tekst als onze verwerker en gebruikt die <strong>niet</strong> om zijn
+    eigen modellen te trainen. De verwerking vindt plaats op de servers van Google.
+  </p>
+
+  <h2>Waar je gegevens worden opgeslagen</h2>
+  <p>
+    De app maakt gebruik van <strong>Google Firebase</strong> (Firebase Authentication, Cloud
+    Firestore, Cloud Storage en Cloud Functions) voor het inloggen, het opslaan van gegevens,
+    het genereren van filmpjes en het versturen van meldingen. Google verwerkt deze gegevens als
+    onze verwerker. Een deel van de app bewaart ook een <strong>kopie op je eigen toestel</strong>
+    (je club, trainingen en oefeningen) zodat de app vlot werkt; bij uitloggen wordt die kopie
+    verwijderd.
+  </p>
+
+  <h2>Delen met anderen</h2>
+  <ul>
+    <li><strong>Binnen je club</strong>: om samen te kunnen werken zijn bepaalde gegevens zichtbaar voor je clubgenoten. Zo kunnen clubadmins en teamgenoten je <strong>naam</strong> (en, als je die invult, je <strong>telefoonnummer</strong>) zien om contact op te nemen, en worden gedeelde <strong>bibliotheekoefeningen</strong> en <strong>teamtrainingen</strong> met de club gedeeld.</li>
+    <li><strong>Filmpjes</strong> zijn toegankelijk voor ingelogde trainers; wanneer je een filmpje via WhatsApp of een andere app <strong>deelt</strong>, doe je dat zelf en gelden de voorwaarden van die dienst.</li>
+    <li>We <strong>verkopen</strong> je gegevens niet, tonen <strong>geen advertenties</strong> en gebruiken <strong>geen tracking of analytics</strong>. Gegevens worden alleen verwerkt door Google (Firebase en Vertex AI) voor zover nodig om de app te laten werken, of wanneer we wettelijk verplicht zijn.</li>
+  </ul>
+
+  <h2>Beveiliging</h2>
+  <p>
+    Alle communicatie met de backend verloopt versleuteld (<strong>TLS/HTTPS</strong>) en Google
+    versleutelt de opgeslagen gegevens standaard op zijn servers. <strong>Firebase Security
+    Rules</strong> bepalen wie welke gegevens mag lezen of schrijven; gevoelige acties (zoals het
+    beheren van clubs, leden en teams) verlopen uitsluitend via beveiligde Cloud Functions.
+  </p>
+
+  <h2>Bewaartermijnen</h2>
+  <ul>
+    <li>Je <strong>account-, club-, trainings- en oefeninggegevens</strong> bewaren we zolang je een account hebt.</li>
+    <li><strong>Uitnodigingscodes</strong> verlopen automatisch na 14 dagen.</li>
+    <li>Verwijder je je account, dan worden <strong>al je gegevens uit de cloud verwijderd</strong> (zie &ldquo;Je rechten&rdquo;).</li>
+  </ul>
+
+  <h2>Je rechten</h2>
+  <p>Je hebt op grond van de privacywetgeving (AVG) onder meer het recht om:</p>
+  <ul>
+    <li>je gegevens <strong>in te zien</strong>;</li>
+    <li>je gegevens te <strong>corrigeren</strong> (je naam, telefoonnummer en clubgegevens pas je zelf aan in de app);</li>
+    <li>je account en alle bijbehorende gegevens <strong>zelf te verwijderen</strong> in de app via het <em>accountmenu (icoon rechtsboven) &rsaquo; Account verwijderen</em>; daarmee wordt alles wat in de cloud staat gewist;</li>
+    <li>bezwaar te maken tegen de verwerking van je gegevens.</li>
+  </ul>
+  <p>
+    Wil je hier gebruik van maken of heb je een vraag? Neem dan contact met ons op via het
+    e-mailadres onderaan deze pagina. Je kunt push-meldingen op elk moment uitzetten in de app of
+    in de instellingen van je telefoon.
+  </p>
+
+  <h2>Kinderen</h2>
+  <p>
+    TrainingsBuddy is bedoeld voor (jeugd)trainers en niet gericht op kinderen. Ben je jonger dan
+    16 jaar, gebruik de app dan alleen met toestemming van een ouder of verzorger.
+  </p>
+
+  <h2>Wijzigingen</h2>
+  <p>
+    We kunnen dit privacybeleid van tijd tot tijd aanpassen. De meest recente versie staat altijd
+    op deze pagina, met bovenaan de datum van de laatste wijziging.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Vragen over dit privacybeleid of over je gegevens?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div data-lang="en">
+  <p class="lead">
+    This privacy policy explains which personal data the <strong>TrainingsBuddy</strong> app
+    (&ldquo;Training in Beeld&rdquo;) processes, why we use it, who we share it with and which
+    rights you have. We only collect what is needed to make the app work and we show no
+    advertisements.
+  </p>
+
+  <div class="card">
+    <h3>Who is responsible?</h3>
+    <p>
+      TrainingsBuddy is built and managed by Maarten Doek. For questions about this privacy policy
+      or your data, you can contact us via the e-mail address at the bottom of this page.
+    </p>
+  </div>
+
+  <h2>What data we process</h2>
+
+  <h3>Account and profile data</h3>
+  <p>Signing in is required to use the app. Depending on your sign-in method we process:</p>
+  <ul>
+    <li>An <strong>account ID</strong> and the <strong>sign-in method</strong> (Apple, Google, e-mail or anonymous).</li>
+    <li>When signing in with <strong>e-mail</strong>, <strong>Apple</strong> or <strong>Google</strong>: your <strong>e-mail address</strong> (with Apple you may choose a hide-my-email address).</li>
+    <li>The <strong>name</strong> you enter and (optionally) your <strong>phone number</strong>, plus your notification preferences.</li>
+  </ul>
+
+  <h3>Club, team and membership data</h3>
+  <ul>
+    <li><strong>Club data</strong>: club name, town, club colours and (optionally) a <strong>club logo</strong> you pick from your photo library.</li>
+    <li><strong>Team data</strong>: team name, team type, number of players, training days and pitch dimensions.</li>
+    <li>Your <strong>role</strong> (coach or club admin), your <strong>membership status</strong> and which team you belong to.</li>
+  </ul>
+
+  <h3>Sessions, drills and clips</h3>
+  <ul>
+    <li>The <strong>drills</strong> you create: title, the <strong>description</strong> you type, coaching points, tags and settings.</li>
+    <li>The <strong>sessions</strong> you build: date, theme, notes and the order of drills.</li>
+    <li>The automatically generated <strong>clips</strong> and thumbnails, and &ldquo;likes&rdquo; you give to drills.</li>
+  </ul>
+
+  <h3>Invitations and transfers</h3>
+  <ul>
+    <li><strong>Invitation codes</strong> to add coaches to a club (valid for 14 days).</li>
+    <li>When <strong>moving to another club</strong>: your name, the clubs involved and the desired team.</li>
+  </ul>
+
+  <h3>Technical data</h3>
+  <ul>
+    <li>A <strong>notification token</strong> from your device (with platform and app version), so we can send you push notifications if you grant permission.</li>
+    <li>A simple <strong>counter</strong> of how many clips you create per day, to keep usage fair.</li>
+  </ul>
+
+  <h2>The AI step (Google Gemini)</h2>
+  <p>
+    To turn your description into a clip, our backend sends the <strong>text of your drill</strong>
+    to a Google <strong>Gemini</strong> language model, via <strong>Google Vertex AI</strong>. The
+    model turns it into a script, after which the app renders the clip. Google processes this text
+    as our processor and does <strong>not</strong> use it to train its own models. Processing takes
+    place on Google's servers.
+  </p>
+
+  <h2>Where your data is stored</h2>
+  <p>
+    The app uses <strong>Google Firebase</strong> (Firebase Authentication, Cloud Firestore, Cloud
+    Storage and Cloud Functions) for signing in, storing data, generating clips and sending
+    notifications. Google processes this data as our processor. Part of the app also keeps a
+    <strong>copy on your own device</strong> (your club, sessions and drills) so the app runs
+    smoothly; this copy is removed when you sign out.
+  </p>
+
+  <h2>Sharing with others</h2>
+  <ul>
+    <li><strong>Within your club</strong>: to collaborate, some data is visible to your club members. Club admins and teammates can see your <strong>name</strong> (and, if you enter it, your <strong>phone number</strong>) to get in touch, and shared <strong>library drills</strong> and <strong>team sessions</strong> are shared with the club.</li>
+    <li><strong>Clips</strong> are accessible to signed-in coaches; when you <strong>share</strong> a clip via WhatsApp or another app, you do so yourself and that service's terms apply.</li>
+    <li>We do <strong>not sell</strong> your data, show <strong>no advertisements</strong> and use <strong>no tracking or analytics</strong>. Data is only processed by Google (Firebase and Vertex AI) as far as needed to run the app, or when we are legally required to.</li>
+  </ul>
+
+  <h2>Security</h2>
+  <p>
+    All communication with the backend is encrypted (<strong>TLS/HTTPS</strong>) and Google
+    encrypts the stored data by default on its servers. <strong>Firebase Security Rules</strong>
+    determine who may read or write which data; sensitive actions (such as managing clubs, members
+    and teams) only run through secured Cloud Functions.
+  </p>
+
+  <h2>Retention periods</h2>
+  <ul>
+    <li>We keep your <strong>account, club, session and drill data</strong> for as long as you have an account.</li>
+    <li><strong>Invitation codes</strong> expire automatically after 14 days.</li>
+    <li>If you delete your account, <strong>all your data is removed from the cloud</strong> (see &ldquo;Your rights&rdquo;).</li>
+  </ul>
+
+  <h2>Your rights</h2>
+  <p>Under privacy law (GDPR) you have, among others, the right to:</p>
+  <ul>
+    <li><strong>access</strong> your data;</li>
+    <li><strong>correct</strong> your data (you change your name, phone number and club data yourself in the app);</li>
+    <li><strong>delete</strong> your account and all associated data yourself in the app via the <em>account menu (icon top-right) &rsaquo; Delete account</em>; this erases everything stored in the cloud;</li>
+    <li>object to the processing of your data.</li>
+  </ul>
+  <p>
+    Want to exercise these rights or have a question? Contact us via the e-mail address at the
+    bottom of this page. You can turn off push notifications at any time in the app or in your
+    phone's settings.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    TrainingsBuddy is intended for (youth) coaches and is not aimed at children. If you are under
+    16, only use the app with the permission of a parent or guardian.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update this privacy policy from time to time. The most recent version is always on this
+    page, with the date of the last change at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Questions about this privacy policy or about your data?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <footer>
+    <span data-lang="nl">TrainingsBuddy — Privacybeleid · Deze pagina hoort bij de TrainingsBuddy-app voor de App Store en Google Play.</span>
+    <span data-lang="en">TrainingsBuddy — Privacy Policy · This page belongs to the TrainingsBuddy app for the App Store and Google Play.</span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'md-lang';
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    function apply(lang) {
+      if (lang !== 'en') lang = 'nl';
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = 'nl';
+    try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+    apply(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
+</body>
+</html>

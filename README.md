@@ -13,6 +13,7 @@ taalknop rechtsboven.
 | Aan'm de App (Aan'm de Podcast) | iOS · Android | `id6785004671` | `nl.aanmdepodcast.aanm_fan_app` |
 | GardenAlerts | iOS · Android | `id6762011265` | `com.maartendoek.garden_alerts` |
 | FF Soundboard (FunFair Soundboard) | iOS · Android | `id6760431806` | `com.maartendoek.flutter_ffsoundboard` |
+| TrainingsBuddy (Training in Beeld) | iOS · Android | binnenkort | binnenkort |
 
 ## Structuur
 
@@ -25,6 +26,9 @@ taalknop rechtsboven.
 /gardenalerts/privacy/         Privacybeleid (eigen stijl)
 /ff-soundboard/                App-landing — FF Soundboard
 /ff-soundboard/privacy/        Privacybeleid (eigen stijl)
+/trainingsbuddy/               App-landing — TrainingsBuddy
+/trainingsbuddy/privacy/       Privacybeleid (eigen stijl)
+/trainingsbuddy/voorwaarden/   Gebruiksvoorwaarden (eigen stijl)
 /homepage/                     Redirect naar / (oude Google Sites-URL)
 /404.html                      Nette 404
 /assets/site.css               Gedeeld ontwerp voor hub + app-landingen

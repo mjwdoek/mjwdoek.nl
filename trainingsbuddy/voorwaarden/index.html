@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<title>Gebruiksvoorwaarden — TrainingsBuddy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+  :root {
+    --bg: #0F1A14;
+    --bg-deep: #0B140F;
+    --card: #17251C;
+    --raised: #1F3126;
+    --border: #2C4234;
+    --gold: #F5C842;
+    --green: #2E7D32;
+    --green-light: #388E3C;
+    --text-strong: #FFFFFF;
+    --text-body: #EEF3EC;
+    --text-dim: #9DB3A3;
+    --font-display: 'Barlow Condensed', system-ui, sans-serif;
+    --font-body: 'Barlow', system-ui, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--text-body);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding: 0 20px;
+    overflow-x: hidden;
+  }
+
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 0 80px; }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(42px, 10vw, 76px);
+    line-height: 0.95;
+    letter-spacing: 0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.02em;
+    color: var(--gold);
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--text-dim);
+    margin-top: 18px;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(24px, 5vw, 34px);
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    color: var(--text-strong);
+    text-transform: uppercase;
+    margin: 44px 0 14px;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-strong);
+    margin: 22px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+
+  a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(245, 200, 66, 0.35);
+  }
+  a:hover { border-bottom-color: var(--gold); }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  strong { color: var(--text-strong); font-weight: 600; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 22px 0;
+  }
+  .card h2:first-child, .card h3:first-child { margin-top: 0; }
+
+  .lead { font-size: 17px; color: var(--text-body); }
+
+  .contact-mail { font-family: var(--font-mono); font-size: 14px; color: var(--gold); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 56px;
+    padding-top: 24px;
+    font-size: 13px;
+    color: var(--text-dim);
+  }
+
+  .topbar {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 22px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .backlink {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+    border-bottom: none;
+  }
+  .backlink:hover { color: var(--gold); }
+  .langbar {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+    background: var(--card);
+  }
+  .langbar button {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    background: transparent;
+    border: 0;
+    padding: 6px 14px;
+    cursor: pointer;
+  }
+  .langbar button[aria-pressed="true"] { color: #1A1405; background: var(--gold); }
+
+  [data-lang] { display: none; }
+  html[lang="nl"] [data-lang="nl"],
+  html[lang="en"] [data-lang="en"] { display: revert; }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <a class="backlink" href="/trainingsbuddy/">&larr; <span data-lang="nl">Terug naar de app</span><span data-lang="en">Back to the app</span></a>
+  <div class="langbar" role="group" aria-label="Taal / Language">
+    <button type="button" data-set-lang="nl" aria-pressed="true">NL</button>
+    <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main class="wrap">
+  <header>
+    <div class="eyebrow">TrainingsBuddy</div>
+    <h1><span data-lang="nl">Gebruiksvoorwaarden</span><span data-lang="en">Terms of Use</span></h1>
+    <div class="subtitle">Training in Beeld</div>
+    <div class="meta"><span data-lang="nl">Laatst bijgewerkt: 13 november 2026</span><span data-lang="en">Last updated: 13 November 2026</span></div>
+  </header>
+
+  <!-- ================= NL ================= -->
+  <div data-lang="nl">
+  <p class="lead">
+    Welkom bij <strong>TrainingsBuddy</strong> (&ldquo;Training in Beeld&rdquo;). Door de app te
+    gebruiken ga je akkoord met deze gebruiksvoorwaarden. Lees ze even door — ze houden de app
+    bruikbaar en veilig voor alle trainers.
+  </p>
+
+  <div class="card">
+    <h3>Wie zijn wij?</h3>
+    <p>
+      TrainingsBuddy wordt gemaakt en beheerd door Maarten Doek (&ldquo;wij&rdquo;). Voor vragen
+      over deze voorwaarden kun je contact opnemen via het e-mailadres onderaan deze pagina.
+    </p>
+  </div>
+
+  <h2>Je account</h2>
+  <ul>
+    <li>Gebruik van de app vereist een account. Je logt in met Apple, Google, e-mail of anoniem en bent zelf verantwoordelijk voor je inloggegevens.</li>
+    <li>Je geeft correcte gegevens op en gebruikt de app niet namens iemand anders zonder toestemming.</li>
+    <li>Je kunt je account op elk moment zelf verwijderen via het <strong>accountmenu (icoon rechtsboven) &rsaquo; Account verwijderen</strong>; daarmee worden al je gegevens uit de cloud gewist.</li>
+  </ul>
+
+  <h2>Clubs, teams en rollen</h2>
+  <ul>
+    <li>Je kunt een <strong>club</strong> aanmaken of je via een uitnodiging of aanvraag bij een club aansluiten. Een <strong>clubadmin</strong> beheert de club, keurt nieuwe trainers en teams goed en kan leden beheren.</li>
+    <li><strong>Uitnodigingscodes</strong> zijn 14 dagen geldig. Een <strong>overstap</strong> naar een andere club verloopt via een aanvraag die de betrokken clubadmin beoordeelt.</li>
+    <li>TrainingsBuddy-beheerders kunnen, waar nodig voor het beheer en de veiligheid van de app, ondersteunende handelingen verrichten.</li>
+  </ul>
+
+  <h2>Jouw inhoud</h2>
+  <p>
+    In de app maak je zelf inhoud, zoals <strong>oefeningen</strong> (met beschrijvingen),
+    <strong>trainingen</strong> en een <strong>clublogo</strong>. Die inhoud blijft van jou, maar je
+    geeft ons toestemming om deze binnen de app te verwerken en — waar jij dat kiest — met je club
+    of team te delen.
+  </p>
+
+  <div class="card">
+    <p>Bij het plaatsen van inhoud ga je ermee akkoord dat je géén inhoud plaatst die:</p>
+    <ul>
+      <li>inbreuk maakt op rechten van anderen (waaronder auteursrecht, merkrechten en privacy);</li>
+      <li>beledigend, haatdragend, bedreigend of anderszins ongepast is;</li>
+      <li>onwettig is of aanzet tot onwettig gedrag.</li>
+    </ul>
+    <p>Zorg dat je het recht hebt om een clublogo of andere inhoud te gebruiken die je uploadt.</p>
+  </div>
+
+  <h2>Automatisch gegenereerde filmpjes</h2>
+  <p>
+    De filmpjes worden <strong>automatisch gegenereerd</strong> op basis van jouw beschrijving, met
+    behulp van AI. Daardoor kan een filmpje soms afwijken van wat je bedoelde of een fout bevatten.
+    Controleer een filmpje altijd zelf voordat je het gebruikt of deelt; je kunt met de knop
+    <em>&ldquo;Klopt iets niet?&rdquo;</em> een correctie aanvragen. We geven geen garantie op de
+    juistheid of geschiktheid van gegenereerde inhoud — het blijft hulpmateriaal voor jouw eigen
+    training.
+  </p>
+
+  <h2>Eerlijk gebruik</h2>
+  <p>
+    Om de app voor iedereen werkbaar en betaalbaar te houden, geldt een <strong>daglimiet</strong>
+    op het aantal te genereren filmpjes. Misbruik van de app of het omzeilen van limieten is niet
+    toegestaan.
+  </p>
+
+  <h2>Intellectueel eigendom</h2>
+  <p>
+    De naam, het logo, de vormgeving, de voorbeeldoefeningen en de software van TrainingsBuddy zijn
+    van ons. Je mag de app gebruiken voor je eigen trainingen, maar niet kopiëren, doorverkopen of
+    namaken.
+  </p>
+
+  <h2>Beschikbaarheid en aansprakelijkheid</h2>
+  <p>
+    We doen ons best om de app goed te laten werken, maar bieden 'm aan &ldquo;zoals hij is&rdquo;.
+    De app is afhankelijk van diensten van derden (zoals Google Firebase en Vertex AI) en kan
+    tijdelijk niet beschikbaar zijn. We zijn niet aansprakelijk voor schade door het gebruik van de
+    app, door gegenereerde inhoud of door inhoud die door gebruikers is geplaatst.
+  </p>
+
+  <h2>Beëindiging</h2>
+  <p>
+    Je mag je account op elk moment verwijderen. Wij mogen toegang tot (delen van) de app beperken
+    of beëindigen als je deze voorwaarden overtreedt of de app misbruikt.
+  </p>
+
+  <h2>Wijzigingen</h2>
+  <p>
+    We kunnen deze voorwaarden van tijd tot tijd aanpassen. De meest recente versie staat altijd op
+    deze pagina, met bovenaan de datum van de laatste wijziging.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Vragen over deze gebruiksvoorwaarden?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <!-- ================= EN ================= -->
+  <div data-lang="en">
+  <p class="lead">
+    Welcome to <strong>TrainingsBuddy</strong> (&ldquo;Training in Beeld&rdquo;). By using the app
+    you agree to these terms of use. Please read them — they keep the app usable and safe for all
+    coaches.
+  </p>
+
+  <div class="card">
+    <h3>Who are we?</h3>
+    <p>
+      TrainingsBuddy is built and managed by Maarten Doek (&ldquo;we&rdquo;). For questions about
+      these terms, you can contact us via the e-mail address at the bottom of this page.
+    </p>
+  </div>
+
+  <h2>Your account</h2>
+  <ul>
+    <li>Using the app requires an account. You sign in with Apple, Google, e-mail or anonymously and are responsible for your own login details.</li>
+    <li>You provide correct details and do not use the app on someone else's behalf without permission.</li>
+    <li>You can delete your account at any time via the <strong>account menu (icon top-right) &rsaquo; Delete account</strong>; this erases all your data from the cloud.</li>
+  </ul>
+
+  <h2>Clubs, teams and roles</h2>
+  <ul>
+    <li>You can create a <strong>club</strong> or join one via an invitation or request. A <strong>club admin</strong> manages the club, approves new coaches and teams, and can manage members.</li>
+    <li><strong>Invitation codes</strong> are valid for 14 days. A <strong>transfer</strong> to another club goes through a request that the relevant club admin reviews.</li>
+    <li>TrainingsBuddy administrators may carry out supporting actions where needed for the management and safety of the app.</li>
+  </ul>
+
+  <h2>Your content</h2>
+  <p>
+    In the app you create content yourself, such as <strong>drills</strong> (with descriptions),
+    <strong>sessions</strong> and a <strong>club logo</strong>. That content remains yours, but you
+    give us permission to process it within the app and — where you choose — to share it with your
+    club or team.
+  </p>
+
+  <div class="card">
+    <p>By posting content, you agree not to post content that:</p>
+    <ul>
+      <li>infringes the rights of others (including copyright, trademark and privacy);</li>
+      <li>is offensive, hateful, threatening or otherwise inappropriate;</li>
+      <li>is unlawful or incites unlawful behaviour.</li>
+    </ul>
+    <p>Make sure you have the right to use a club logo or any other content you upload.</p>
+  </div>
+
+  <h2>Automatically generated clips</h2>
+  <p>
+    The clips are <strong>generated automatically</strong> from your description, using AI. As a
+    result, a clip may sometimes differ from what you intended or contain an error. Always check a
+    clip yourself before using or sharing it; you can request a correction with the
+    <em>&ldquo;Something not right?&rdquo;</em> button. We give no warranty as to the accuracy or
+    suitability of generated content — it remains supporting material for your own training.
+  </p>
+
+  <h2>Fair use</h2>
+  <p>
+    To keep the app workable and affordable for everyone, a <strong>daily limit</strong> applies to
+    the number of clips you can generate. Misusing the app or circumventing limits is not allowed.
+  </p>
+
+  <h2>Intellectual property</h2>
+  <p>
+    The name, logo, design, example drills and software of TrainingsBuddy belong to us. You may use
+    the app for your own training, but not copy, resell or imitate it.
+  </p>
+
+  <h2>Availability and liability</h2>
+  <p>
+    We do our best to keep the app working well, but we offer it &ldquo;as is&rdquo;. The app
+    depends on third-party services (such as Google Firebase and Vertex AI) and may be temporarily
+    unavailable. We are not liable for damage caused by using the app, by generated content or by
+    content posted by users.
+  </p>
+
+  <h2>Termination</h2>
+  <p>
+    You may delete your account at any time. We may limit or end access to (parts of) the app if
+    you breach these terms or misuse the app.
+  </p>
+
+  <h2>Changes</h2>
+  <p>
+    We may update these terms from time to time. The most recent version is always on this page,
+    with the date of the last change at the top.
+  </p>
+
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Questions about these terms of use?</p>
+    <p class="contact-mail"><a href="mailto:mjwdoek@gmail.com">mjwdoek@gmail.com</a></p>
+  </div>
+  </div>
+
+  <footer>
+    <span data-lang="nl">TrainingsBuddy — Gebruiksvoorwaarden · Deze pagina hoort bij de TrainingsBuddy-app voor de App Store en Google Play.</span>
+    <span data-lang="en">TrainingsBuddy — Terms of Use · This page belongs to the TrainingsBuddy app for the App Store and Google Play.</span>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    var KEY = 'md-lang';
+    var buttons = document.querySelectorAll('[data-set-lang]');
+    function apply(lang) {
+      if (lang !== 'en') lang = 'nl';
+      document.documentElement.lang = lang;
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', b.getAttribute('data-set-lang') === lang ? 'true' : 'false');
+      });
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+    }
+    var saved = 'nl';
+    try { saved = localStorage.getItem(KEY) || 'nl'; } catch (e) {}
+    apply(saved);
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(b.getAttribute('data-set-lang')); });
+    });
+  })();
+</script>
+</body>
+</html>
